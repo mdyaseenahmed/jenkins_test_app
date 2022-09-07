@@ -69,9 +69,13 @@ export default class FormUI extends Component {
         <center>
         <h1>Available Items</h1>
         <table data-testid="table_element">
-            <th>Sl No.</th>
-            <th>Name</th>
-            <th>Price</th>
+          <thead>
+            <tr>
+              <th>Sl No.</th>
+              <th>Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
           <tbody>
             {Item}
           </tbody>

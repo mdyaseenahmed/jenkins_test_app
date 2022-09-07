@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from "@testing-library/react";
-import FormUI from "./ItemAppCRUDAPI/formUI";
+import FormUI from "../ItemAppCRUDAPI/formUI";
 
 test("Testing the Form UI Comp", () => {
     render(<FormUI />)
