@@ -9,7 +9,8 @@ export default class FormUI extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8000/api/getItems")
+    // fetch("http://host.docker.internal:4500/getItems")             // for docker to use the internal port
+    fetch("http://localhost:4500/getItems")
       .then((res) => res.json())
       .then((data) =>{
         console.log(data)
@@ -37,7 +38,8 @@ export default class FormUI extends Component {
             price: newItemPrice
           }
 
-          fetch('http://localhost:8000/api/addItem',{
+          // fetch('http://host.docker.internal:4500/addItem',{         // for docker to use the internal port
+          fetch('http://localhost:4500/addItem',{
             method: 'POST',
             headers: {
               Accept: 'application/json',
@@ -65,7 +67,7 @@ export default class FormUI extends Component {
 
     return(
       <div>
-        <h1>Hello</h1>
+        {/* <h1>Hello</h1> */}
         <center>
         <h1>Available Items</h1>
         <table data-testid="table_element">
